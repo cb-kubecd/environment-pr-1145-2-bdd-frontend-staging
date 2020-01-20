@@ -1,0 +1,39 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7m7w5[0m
+{"level":"warn","ts":1579512023.9996662,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579512024.0003111,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-b6rth[0m
+{"level":"warn","ts":1579512024.9776678,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1579512024.9796712,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-1145-2-hzvdv[0m
+{"level":"warn","ts":1579512053.0902188,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1579512054.4470112,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-1145-2-bdd-frontend-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:45b01c3425d7c9e87c98fdd1cdd3c0259a928e34,1:5db7c1f57e63be93fafd5116fdd7ab4243c2343c
+DEBUG: ran git fetch --unshallow origin 5db7c1f57e63be93fafd5116fdd7ab4243c2343c: 45b01c3425d7c9e87c98fdd1cdd3c0259a928e34: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 45b01c3425d7c9e87c98fdd1cdd3c0259a928e34 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 5db7c1f57e63be93fafd5116fdd7ab4243c2343c in 
+Merged SHA 5db7c1f57e63be93fafd5116fdd7ab4243c2343c with commit message 'chore: Promote bdd-nh-1579511225 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcb-kubecd-environment-pr-1145-2-vxcqx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
